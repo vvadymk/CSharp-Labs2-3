@@ -63,7 +63,6 @@ namespace KochmarLabs2_3.ViewModels
         {
             var result = await Task.Run(() =>
             {
-
                 try
                 {
                     StationManager.CurrentUser = new Person(_firstName, _lastName, _eMail, _birthDate);

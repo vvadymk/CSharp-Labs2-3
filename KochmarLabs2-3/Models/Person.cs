@@ -257,7 +257,7 @@ namespace KochmarLab2
             return (DateOfBirth.Day == DateTime.Today.Day && DateOfBirth.Month == DateTime.Today.Month);
         }
 
-        public void ValidAge(int age)
+        private void ValidAge(int age)
         {
             if (age > 150)
                 throw new PersonException.MaybeDiedPersonException();
@@ -266,19 +266,19 @@ namespace KochmarLab2
                 throw new PersonException.NotEvenBorn();
         }
 
-        public void ValidEmail(string email)
+        private void ValidEmail(string email)
         {
             if (!new EmailAddressAttribute().IsValid(email))
                 throw new PersonException.EmailException();           
         }
 
-        public void ValidFirstName(string str)
+        private void ValidFirstName(string str)
         {
             if(str.Length<2)
                 throw new PersonException.FirstNameException();
         }
 
-        public void ValidLastName(string str)
+        private void ValidLastName(string str)
         {
             if(str.Length<2)
                 throw new PersonException.LastNameException();
