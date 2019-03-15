@@ -26,6 +26,18 @@ namespace KochmarLabs2_3.Exceptions
             {}
         }
 
-     
+        internal class FirstNameException : Exception
+        {
+            public FirstNameException()
+                :base("Too short FirstName")
+            { }
+        }
+
+        internal class LastNameException : Exception
+        {
+            public LastNameException()
+                : base("Too short LastName")
+            { }
+        }
     }
 }

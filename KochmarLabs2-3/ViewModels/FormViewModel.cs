@@ -67,8 +67,6 @@ namespace KochmarLabs2_3.ViewModels
                 try
                 {
                     StationManager.CurrentUser = new Person(_firstName, _lastName, _eMail, _birthDate);
-                    StationManager.CurrentUser.ValidAge(StationManager.CurrentUser.Age);
-                    StationManager.CurrentUser.ValidEmail(StationManager.CurrentUser.Email);
                 }
                 catch (PersonException.MaybeDiedPersonException e)
                 {
@@ -81,6 +79,16 @@ namespace KochmarLabs2_3.ViewModels
                     return false;
                 }
                 catch (PersonException.EmailException e)
+                {
+                    MessageBox.Show(e.ToString());
+                    return false;
+                }
+                catch (PersonException.FirstNameException e)
+                {
+                    MessageBox.Show(e.ToString());
+                    return false;
+                }
+                catch (PersonException.LastNameException e)
                 {
                     MessageBox.Show(e.ToString());
                     return false;

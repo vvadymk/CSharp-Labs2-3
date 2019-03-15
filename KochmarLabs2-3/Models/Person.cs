@@ -23,6 +23,10 @@ namespace KochmarLab2
             _lastName = lastName;
             _eMail = email;
             _birthDate = birthDate;
+            ValidAge(this.Age);
+            ValidEmail(this.Email);
+            ValidFirstName(this.FirstName);
+            ValidLastName(this.LastName);
         }
 
         public Person(string fistName, string lastName, string email)
@@ -256,22 +260,28 @@ namespace KochmarLab2
         public void ValidAge(int age)
         {
             if (age > 150)
-            {
                 throw new PersonException.MaybeDiedPersonException();
-            }
 
             if (age < 0)
-            {
                 throw new PersonException.NotEvenBorn();
-            }
         }
 
         public void ValidEmail(string email)
         {
             if (!new EmailAddressAttribute().IsValid(email))
-            {
-                throw new PersonException.EmailException();
-            }
+                throw new PersonException.EmailException();           
+        }
+
+        public void ValidFirstName(string str)
+        {
+            if(str.Length<2)
+                throw new PersonException.FirstNameException();
+        }
+
+        public void ValidLastName(string str)
+        {
+            if(str.Length<2)
+                throw new PersonException.LastNameException();
         }
     }
 }
