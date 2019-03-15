@@ -1,5 +1,4 @@
-﻿using System;
-using KochmarLabs2_3.Tools;
+﻿using KochmarLabs2_3.Tools;
 using KochmarLabs2_3.Tools.Managers;
 
 namespace KochmarLabs2_3.ViewModels
