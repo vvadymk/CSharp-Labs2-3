@@ -1,4 +1,5 @@
-﻿using KochmarLabs2_3.Tools;
+﻿using System;
+using KochmarLabs2_3.Tools;
 using KochmarLabs2_3.Tools.Managers;
 
 namespace KochmarLabs2_3.ViewModels
@@ -18,5 +19,7 @@ namespace KochmarLabs2_3.ViewModels
         public string ChineseZodiac => StationManager.CurrentUser.ChineseZodiac;
 
         public bool IsBirthday => StationManager.CurrentUser.IsBirthday;
+
+        public string BirthDate => StationManager.CurrentUser.DateOfBirth.ToString("yyyy MMMM dd");
     }
 }

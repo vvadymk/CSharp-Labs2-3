@@ -68,7 +68,7 @@ namespace KochmarLab2
             }
         }
 
-        private DateTime DateOfBirth => _birthDate;
+        public DateTime DateOfBirth => _birthDate;
 
         public string WesternZodiac => WesternZodiacCount();
 
