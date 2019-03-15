@@ -20,6 +20,6 @@ namespace KochmarLabs2_3.ViewModels
 
         public bool IsBirthday => StationManager.CurrentUser.IsBirthday;
 
-        public string BirthDate => StationManager.CurrentUser.DateOfBirth.ToString("yyyy MMMM dd");
+        public string BirthDate => StationManager.CurrentUser.DateOfBirth.ToString("dd-MM-yyyy");
     }
 }
