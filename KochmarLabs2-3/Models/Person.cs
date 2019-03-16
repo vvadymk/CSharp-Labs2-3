@@ -51,7 +51,7 @@ namespace KochmarLab2
 
         public string Email => _eMail;
 
-        public int Age
+        private int Age
         {
             get
             {
